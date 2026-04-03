@@ -234,11 +234,11 @@
         let dados = dadosCarregados || {};
         
         // Assegurar fallback seguro para arrays e objetos essenciais
-        if (!dados.dinheiro && dados.dinheiro !== 0) dados.dinheiro = 1500;
+        if (!dados.dinheiro && dados.dinheiro !== 0) dados.dinheiro = 0;
         if (!dados.inventario) dados.inventario = [];
         if (!dados.armasCompradas) dados.armasCompradas = [];
-        if (!dados.vidaCorpo) dados.vidaCorpo = { cabeca:{atual:10, max:10}, torso:{atual:20, max:20}, bracoDir:{atual:10, max:10}, bracoEsq:{atual:10, max:10}, pernaDir:{atual:10, max:10}, pernaEsq:{atual:10, max:10} };
-        if (!dados.statusMentais) dados.statusMentais = { sanidade:{atual:20, max:20}, stress:{atual:0, max:20}, consciencia:{atual:15, max:15} };
+        if (!dados.vidaCorpo) dados.vidaCorpo = { cabeca:{atual:10, max:12}, torso:{atual:20, max:25}, bracoDir:{atual:10, max:15}, bracoEsq:{atual:10, max:15}, pernaDir:{atual:10, max:15}, pernaEsq:{atual:10, max:15} };
+        if (!dados.statusMentais) dados.statusMentais = { sanidade:{atual:20, max:40}, stress:{atual:0, max:20}, consciencia:{atual:15, max:15} };
 
         function salvar() { localStorage.setItem(usuarioLogado, JSON.stringify(dados)); }
 
