@@ -29,7 +29,7 @@ if (loginForm) {
                 // CORREÇÃO: Estrutura de dados completa para evitar bugs no painel
                 const novoPlayer = {
                     senha: passIn,
-                    dinheiro: 1500, // Ajustado para dar poder de compra inicial no RPG
+                    dinheiro: 0, // Ajustado para dar poder de compra inicial no RPG
                     inventario: [],
                     armasCompradas: [],
                     vidaCorpo: {
