@@ -267,13 +267,6 @@ const DB_ARMAS = [
 { nome:"Dinamite", preco:220, dano:"2D8", capacidade:"-", classe:"Especial", hab:"Uma banana de dinamite que causa 2D8 de dano ao explodir com um raio de 3 metros de explosão." },
 { nome:"Lança Foguetes", preco:5500, dano:"2D20", capacidade:"1", classe:"Especial", hab:"Uma arma que dispara um foguete por vez que causa até 2D20." },
 { nome:"C4", preco:2200, dano:"2D12", capacidade:"-", classe:"Especial", hab:"Uma carga explosiva dentro de um plástico com um dispositivo para detonação remota, a explosão tem 4 metros que causa 2D12 de dano." },
-
-/* Corpo a Corpo */
-{ nome:"Faca de Arremesso", preco:120, dano:"D2", capacidade:"-", classe:"Corpo a Corpo", hab:"Pensa Rápido - Essa faca permite ser arremessada facilmente por ser feita de um material leve." },
-{ nome:"Faca de Combate", preco:180, dano:"D3", capacidade:"-", classe:"Corpo a Corpo", hab:"Hoje não - Permite sacrificar a faca para impedir um ataque inimigo, Mas somente uma faca pode ser usada para combate." },
-{ nome:"Facão", preco:380, dano:"D4", capacidade:"-", classe:"Corpo a Corpo", hab:"Mais um dia de trabalho - Essa arma permite limpar o terreno que possui muita vegetação, além de causar o dobro de dano contra plantas." },
-{ nome:"Machado", preco:520, dano:"D4+2", capacidade:"-", classe:"Corpo a Corpo", hab:"Tudo é arvore pra Mim - Essa arma permite 2 ataques no mesmo turno, essa habilidade só ativa contra inimigos resistentes." },
-{ nome:"Katana", preco:2000, dano:"D6", capacidade:"-", classe:"Corpo a Corpo", hab:"Reflexo Divino - Com essa arma na mão, uma vez por combate pode defletir um ataque sem rolar dado." },
 { nome:"Sinalizador de mão", preco:40, dano:"Nenhum", capacidade:"Uso único", classe:"Especial", hab:"Produz fumaça avermelhada e uma luz vermelha muito forte." },
 { nome:"Granada de fragmentação", preco:75, dano:"D12 no centro e D6 ao redor", capacidade:"Uso único", classe:"Explosivo", hab:"Explode causando dano no centro e estilhaços ao redor." },
 { nome:"Granada de fumaça", preco:65, dano:"Nenhum", capacidade:"Uso único", classe:"Especial", hab:"Cria uma cortina de fumaça que dificulta visão e respiração." },
@@ -303,7 +296,13 @@ const DB_ARMAS = [
 { nome:"Termita", preco:900, dano:"Contínuo", capacidade:"Uso único", classe:"Explosivo", hab:"Gruda no alvo e causa combustão contínua." },
 { nome:"Arpão", preco:1800, dano:"Perfuração", capacidade:"2 usos por lança", classe:"Arma", hab:"Dispara uma lança que pode ser puxada de volta." },
 { nome:"Lança de arpão", preco:90, dano:"Perfuração", capacidade:"Uso único", classe:"Munição", hab:"Projétil para arpão." },
-];
+
+/* Corpo a Corpo */
+{ nome:"Faca de Arremesso", preco:120, dano:"D2", capacidade:"-", classe:"Corpo a Corpo", hab:"Pensa Rápido - Essa faca permite ser arremessada facilmente por ser feita de um material leve." },
+{ nome:"Faca de Combate", preco:180, dano:"D3", capacidade:"-", classe:"Corpo a Corpo", hab:"Hoje não - Permite sacrificar a faca para impedir um ataque inimigo, Mas somente uma faca pode ser usada para combate." },
+{ nome:"Facão", preco:380, dano:"D4", capacidade:"-", classe:"Corpo a Corpo", hab:"Mais um dia de trabalho - Essa arma permite limpar o terreno que possui muita vegetação, além de causar o dobro de dano contra plantas." },
+{ nome:"Machado", preco:520, dano:"D4+2", capacidade:"-", classe:"Corpo a Corpo", hab:"Tudo é arvore pra Mim - Essa arma permite 2 ataques no mesmo turno, essa habilidade só ativa contra inimigos resistentes." },
+{ nome:"Katana", preco:2000, dano:"D6", capacidade:"-", classe:"Corpo a Corpo", hab:"Reflexo Divino - Com essa arma na mão, uma vez por combate pode defletir um ataque sem rolar dado." },
     ];
         // CORREÇÃO: Recuperação segura que nunca assume que todos os objetos aninhados existem
         let dadosCarregados = JSON.parse(localStorage.getItem(usuarioLogado));
