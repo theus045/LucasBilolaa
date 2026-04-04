@@ -190,8 +190,6 @@
         const usuarioLogado = sessionStorage.getItem("usuarioLogado");
         if (!usuarioLogado) window.location.href = "index.html";
 
-        const DB_ARMAS = [
-            /* Pistolas */
 const DB_ARMAS = [
 
 /* Pistolas */
@@ -275,7 +273,8 @@ const DB_ARMAS = [
 { nome:"Faca de Combate", preco:180, dano:"D3", capacidade:"-", classe:"Corpo a Corpo", hab:"Hoje não - Permite sacrificar a faca para impedir um ataque inimigo, Mas somente uma faca pode ser usada para combate." },
 { nome:"Facão", preco:380, dano:"D4", capacidade:"-", classe:"Corpo a Corpo", hab:"Mais um dia de trabalho - Essa arma permite limpar o terreno que possui muita vegetação, além de causar o dobro de dano contra plantas." },
 { nome:"Machado", preco:520, dano:"D4+2", capacidade:"-", classe:"Corpo a Corpo", hab:"Tudo é arvore pra Mim - Essa arma permite 2 ataques no mesmo turno, essa habilidade só ativa contra inimigos resistentes." },
-{ nome:"Katana", preco:2000, dano:"D6", capacidade:"-", classe:"Corpo a Corpo", hab:"Reflexo Divino - Com essa arma na mão, uma vez por combate pode defletir um ataque sem rolar dado." }
+{ nome:"Katana", preco:2000, dano:"D6", capacidade:"-", classe:"Corpo a Corpo", hab:"Reflexo Divino - Com essa arma na mão, uma vez por combate pode defletir um ataque sem rolar dado." },
+    ];
         // CORREÇÃO: Recuperação segura que nunca assume que todos os objetos aninhados existem
         let dadosCarregados = JSON.parse(localStorage.getItem(usuarioLogado));
         
