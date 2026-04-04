@@ -192,86 +192,90 @@
 
         const DB_ARMAS = [
             /* Pistolas */
-            { nome:"Glock 19", preco:750, dano:"D6", capacidade:"15/15", hab:"Permite armazená-la em lugares menores por seu tamanho compacto." },
-            { nome:"Glock 17", preco:860, dano:"D6+2", capacidade:"17/17", hab:"Uma vez por combate, pode rolar o dano duas vezes e escolher o maior." },
-            { nome:"Beretta 92FS", preco:880, dano:"D6+2", capacidade:"15/15", hab:"Ganha +1 de vantagem em acertos consecutivos." },
-            { nome:"CZ 75 SP-01", preco:980, dano:"D6+D3", capacidade:"18/18", hab:"Ao rolar 1 no dano, pode rolar novamente uma vez por turno." },
-            { nome:"Sig Sauer P226", preco:950, dano:"-", capacidade:"15/15", hab:"O primeiro disparo tem chance de causar Hemorragia no alvo (tirar mais do que 16 no D20)." },
-            { nome:"Glock 18", preco:1200, dano:"D8", capacidade:"15/15", hab:"Gasta todo o pente para atacar todos os inimigos em um curto alcance, distribuindo disparos com 1d3." },
-            { nome:"Caixa de munição 9mm", preco:15, dano:"-", capacidade:"32", hab:"Contém 32 munições. Tiro médio." },
-            { nome:"Colt M1911", preco:960, dano:"D6+2", capacidade:"8/8", hab:"Uma vez por combate pode adicionar +2 de dano e +2 de vantagem no próximo disparo." },
-            { nome:".45 ACP", preco:20, dano:"-", capacidade:"32", hab:"Contém 32 munições. Tiro médio." },
-            { nome:"Smith & Wesson Model 686", preco:850, dano:"D6", capacidade:"6/6", hab:"Uma vez por turno pode escolher ter 1 de desvantagem no disparo para aumentar o dano do tiro em 1 dado acima." },
-            { nome:"Ruger GP100", preco:880, dano:"D8", capacidade:"6/6", hab:"Pode rolar novamente o dano uma vez a cada 2 turnos, mas deve aceitar o segundo resultado." },
-            { nome:"Colt Python", preco:1500, dano:"D6+D4", capacidade:"6/6", hab:"Uma vez por combate, pode anular teste e rolar diretamente o dano." },
-            { nome:"Munição .357 magnum", preco:40, dano:"-", capacidade:"12", hab:"Contém 12 munições. Tiro forte." },
-            { nome:"Taurus 85", preco:990, dano:"D6+2", capacidade:"6/6", hab:"No primeiro tiro do combate, você poderá rolar o teste com +2 de vantagem." },
-            { nome:"Munição .38 Special", preco:30, dano:"-", capacidade:"12", hab:"Contém 12 munições. Tiro leve." },
-            { nome:"Desert Eagle", preco:3000, dano:"D12", capacidade:"7/7", hab:"No primeiro tiro tem chance de causar mais D6 de dano por combate (tirar mais de 15 no D20)." },
-            { nome:"Munição .50", preco:65, dano:"-", capacidade:"14", hab:"Contém 14 munições. Tiro forte." },
+const DB_ARMAS = [
 
-            /* SMGs */
-            { nome:"MAC-10", preco:2050, dano:"D4 por acerto", capacidade:"32/32", hab:"Pode atacar mais de um inimigo na mesma ação, mas com -2 de precisão." },
-            { nome:"M3", preco:2500, dano:"D4+1 por acerto", capacidade:"30/30", hab:"Se falhar pode rolar de novo, mas o dano é pela metade." },
-            { nome:"UMP45", preco:2800, dano:"D4+D3 por acerto", capacidade:"25/25", hab:"Se causar dano máximo, o alvo perde a próxima ação." },
-            { nome:"Thompson", preco:3000, dano:"D6 por acerto", capacidade:"50/50", hab:"Pode gastar 10 balas para causar dano em todos em uma linha horizontal." },
-            { nome:"Kriss Vector", preco:3300, dano:"D6+D3", capacidade:"25/25", hab:"Os primeiros 5 disparos reduzem 35% do recuo." },
-            { nome:"Mini UZI", preco:1700, dano:"D4", capacidade:"20/20", hab:"Pode ser oculta facilmente e armazenada em lugares menores." },
-            { nome:"UZI", preco:2000, dano:"D4+2", capacidade:"32/32", hab:"Se descobrir a posição correta de segurar, ganha +1 de vantagem durante o combate." },
-            { nome:"URU", preco:2200, dano:"D4+D3", capacidade:"32/32", hab:"Uma vez por combate pode disparar rajada descontrolada com efeitos variados ao rolar 1d6." },
-            { nome:"MP40", preco:2800, dano:"D6", capacidade:"32/32", hab:"Ao entrar em combate rola 1d20 para intimidar, se falhar a arma trava." },
-            { nome:"MP5", preco:2400, dano:"D6+1", capacidade:"30/30", hab:"Se o alvo reconhecer a arma, sofre 1d4+1 a mais a cada tiro." },
-            { nome:"LC10", preco:2999, dano:"D4+D3", capacidade:"34/34", hab:"Reduz penalidade de recuo em rajadas nos primeiros 5 disparos." },
-            { nome:"PP-19 Bizon", preco:2580, dano:"D6", capacidade:"64/64", hab:"Após 4 disparos causa dano de fogo e após 6 também afeta o usuário." },
-            { nome:"LACHMANN SUB", preco:2790, dano:"D6+D4", capacidade:"30/30", hab:"Pode alternar entre modo preciso ou insano afetando recuo e alvos." },
-            { nome:"P90", preco:3800, dano:"D8", capacidade:"50/50", hab:"Todos disparos causam hemorragia e dano máximo causa hemorragia grave." },
-            { nome:"Caixa de munição 5.7x28mm", preco:60, dano:"-", capacidade:"25", hab:"Contém 25 munições. Tiro forte." }
-{ nome:"M4", preco:2400, dano:"D4+D3", capacidade:"30/30", hab:"I Can’t Stop - Pode se movimentar, e logo em seguida atira, porém somente 3 tiros." },
-{ nome:"Kalashinikov", preco:3650, dano:"D4+2", capacidade:"30/30", hab:"Aprovado pelo Putin - Essa arma é incapaz de sofrer penalidade de desastre de cair 1 no dado." },
-{ nome:"SKS", preco:2700, dano:"D8", capacidade:"10/10", hab:"Olha! Sem as Mãos! - Não perde precisão usando apenas uma das mãos." },
-{ nome:"Galil ACE", preco:2800, dano:"D6+1", capacidade:"30/30", hab:"Morde e Assopra - O primeiro tiro dela não causará dano mas deixará o alvo incapacitado por uma rodada." },
-{ nome:"Type 81", preco:1600, dano:"D4+1", capacidade:"30/30", hab:"Ditado Chines - Ao usar a arma somente quando necessário ela causará o dobro de dano (Necessário = risco de vida)." },
-{ nome:"Malyuk", preco:3200, dano:"D6", capacidade:"30/30", hab:"Exterminador do Futuro - Se essa arma for levada para uma missão de extermínio ela causa o dobro de dano." },
-{ nome:"Scar", preco:2800, dano:"D4 ou D6", capacidade:"30/30 ou 10/10", hab:"Troca Justa - Essa arma usa dois tipos de munição. A versão leve usa 5.56mm que cabe 30 no pente e causa um d4 de dano, a versão pesada usa 7.62mm e possui 10 de munição no pente causando D8 de dano." },
-{ nome:"Caixa de munição 7.62mm", preco:100, dano:"-", capacidade:"40", hab:"contem 40 munições. tiro forte" },
-{ nome:"Famas", preco:3400, dano:"D4", capacidade:"25/25", hab:"Menina Violenta - O primeiro tiro do combate atira 3 disparos de uma vez anulando recuo até o 5o disparo." },
-{ nome:"AN-94", preco:2094, dano:"D4+1", capacidade:"30/30", hab:"Mata Casal - O primeiro disparo atira 2 tiros de uma vez com 0 recuo, após o disparo o recuo volta ao normal." },
-{ nome:"Steyr AUG", preco:4000, dano:"D4+2", capacidade:"35/35", hab:"General Divino da Espada de Oito Cabos - Essa arma aceita qualquer tipo de munição, porém, quanto maior o calibre, maior o dano que será causado na própria arma. Ao colocar uma munição que não é a própria, o dano é reduzido em 1 dado." },
-{ nome:"Caixa de munição 5,56mm", preco:55, dano:"-", capacidade:"35", hab:"contem 35 munições. tiro medio" },
+/* Pistolas */
+{ nome:"Glock 19", preco:750, dano:"D6", capacidade:"15/15", classe:"Pistolas", hab:"Permite armazená-la em lugares menores por seu tamanho compacto." },
+{ nome:"Glock 17", preco:860, dano:"D6+2", capacidade:"17/17", classe:"Pistolas", hab:"Uma vez por combate, pode rolar o dano duas vezes e escolher o maior." },
+{ nome:"Beretta 92FS", preco:880, dano:"D6+2", capacidade:"15/15", classe:"Pistolas", hab:"Ganha +1 de vantagem em acertos consecutivos." },
+{ nome:"CZ 75 SP-01", preco:980, dano:"D6+D3", capacidade:"18/18", classe:"Pistolas", hab:"Ao rolar 1 no dano, pode rolar novamente uma vez por turno." },
+{ nome:"Sig Sauer P226", preco:950, dano:"-", capacidade:"15/15", classe:"Pistolas", hab:"O primeiro disparo tem chance de causar Hemorragia no alvo (tirar mais do que 16 no D20)." },
+{ nome:"Glock 18", preco:1200, dano:"D8", capacidade:"15/15", classe:"Pistolas", hab:"Gasta todo o pente para atacar todos os inimigos em um curto alcance, distribuindo disparos com 1d3." },
+{ nome:"Colt M1911", preco:960, dano:"D6+2", capacidade:"8/8", classe:"Pistolas", hab:"Uma vez por combate pode adicionar +2 de dano e +2 de vantagem no próximo disparo." },
+{ nome:"Smith & Wesson Model 686", preco:850, dano:"D6", capacidade:"6/6", classe:"Pistolas", hab:"Uma vez por turno pode escolher ter 1 de desvantagem no disparo para aumentar o dano do tiro em 1 dado acima." },
+{ nome:"Ruger GP100", preco:880, dano:"D8", capacidade:"6/6", classe:"Pistolas", hab:"Pode rolar novamente o dano uma vez a cada 2 turnos, mas deve aceitar o segundo resultado." },
+{ nome:"Colt Python", preco:1500, dano:"D6+D4", capacidade:"6/6", classe:"Pistolas", hab:"Uma vez por combate, pode anular teste e rolar diretamente o dano." },
+{ nome:"Taurus 85", preco:990, dano:"D6+2", capacidade:"6/6", classe:"Pistolas", hab:"No primeiro tiro do combate, você poderá rolar o teste com +2 de vantagem." },
+{ nome:"Desert Eagle", preco:3000, dano:"D12", capacidade:"7/7", classe:"Pistolas", hab:"No primeiro tiro tem chance de causar mais D6 de dano por combate (tirar mais de 15 no D20)." },
 
-{ nome:"M1014", preco:2600, dano:"D12 (Perto) D6 (Médio)", capacidade:"6/6", hab:"Truque de Magica - Permite ser sacada das costas e atirar no mesmo turno e dar 1d4 de dano extra ao fazer essa ação." },
-{ nome:"Remington 870", preco:2800, dano:"D12+1 (perto) D6(Médio)", capacidade:"5/5", hab:"Se Ajoelhe Enquanto Fala Comigo - Se um tiro dessa arma acertar na perna e der ⅔ do dano máximo dela, o alvo se ajoelha e perde a próxima ação." },
-{ nome:"Winchester SXP", preco:3200, dano:"D12+D4 (perto) D8 (Médio)", capacidade:"6/6", hab:"Sai Porra! - Se um monstro estiver extremamente perto e um tiro a queima-roupa for possível, o jogador pode dar 1 tiro que gasta toda a munição, rodando o dano de todos os tiros em um único tiro e, de brinde, arremessando o alvo longe mas causa 100 de dano na durabilidade." },
-{ nome:"Mossberg 500", preco:3800, dano:"D12 (perto) D8 (Médio)", capacidade:"6/6", hab:"A verdadeira Força Vem de Proteger o que Você Ama - Se o jogador que possui essa arma estiver perto da morte, os outros jogadores poder a opção de dar suas ações a esse jogador, e ele pegará todas as ações doadas para si até o fim do combate." },
-{ nome:"Spas-12", preco:4000, dano:"D8 (perto) D4 (Médio)", capacidade:"9/9", hab:"Obrigado por Terem me Amado - Se a vida do jogador que porta essa arma chegar a zero, ele terá a oportunidade de se despedir e ter uma morte heroica descarregando suas armas no inimigo rodando um dado de acordo com a quantidade de tiros que pode dar." },
-{ nome:"Caixa de munição calibre 12", preco:30, dano:"-", capacidade:"8", hab:"contem 8 munições. tiro forte" },
+/* Munições Pistola */
+{ nome:"Caixa de munição 9mm", preco:15, dano:"-", capacidade:"32", classe:"Munição", hab:"Contém 32 munições. Tiro médio." },
+{ nome:".45 ACP", preco:20, dano:"-", capacidade:"32", classe:"Munição", hab:"Contém 32 munições. Tiro médio." },
+{ nome:"Munição .357 magnum", preco:40, dano:"-", capacidade:"12", classe:"Munição", hab:"Contém 12 munições. Tiro forte." },
+{ nome:"Munição .38 Special", preco:30, dano:"-", capacidade:"12", classe:"Munição", hab:"Contém 12 munições. Tiro leve." },
+{ nome:"Munição .50", preco:65, dano:"-", capacidade:"14", classe:"Munição", hab:"Contém 14 munições. Tiro forte." },
 
-{ nome:"AWP", preco:4600, dano:"D20", capacidade:"5/5", hab:"Genial! - Se você tiver escondido e tirar acima de 18, o tiro acerta na cabeça." },
-{ nome:"Barrett", preco:5000, dano:"D20", capacidade:"5/5", hab:"Papoco de 40TÃO - A cada abate o dano aumenta 1 D6 e se for na cabeça aumenta 1 D8." },
-{ nome:"Caixa de munição .50", preco:100, dano:"-", capacidade:"5", hab:"cada caixa contem 5 munições." },
+/* SMGs */
+{ nome:"MAC-10", preco:2050, dano:"D4 por acerto", capacidade:"32/32", classe:"SMG", hab:"Pode atacar mais de um inimigo na mesma ação, mas com -2 de precisão." },
+{ nome:"M3", preco:2500, dano:"D4+1 por acerto", capacidade:"30/30", classe:"SMG", hab:"Se falhar pode rolar de novo, mas o dano é pela metade." },
+{ nome:"UMP45", preco:2800, dano:"D4+D3 por acerto", capacidade:"25/25", classe:"SMG", hab:"Se causar dano máximo, o alvo perde a próxima ação." },
+{ nome:"Thompson", preco:3000, dano:"D6 por acerto", capacidade:"50/50", classe:"SMG", hab:"Pode gastar 10 balas para causar dano em todos em uma linha horizontal." },
+{ nome:"Kriss Vector", preco:3300, dano:"D6+D3", capacidade:"25/25", classe:"SMG", hab:"Os primeiros 5 disparos reduzem 35% do recuo." },
+{ nome:"Mini UZI", preco:1700, dano:"D4", capacidade:"20/20", classe:"SMG", hab:"Pode ser oculta facilmente e armazenada em lugares menores." },
+{ nome:"UZI", preco:2000, dano:"D4+2", capacidade:"32/32", classe:"SMG", hab:"Se descobrir a posição correta de segurar, ganha +1 de vantagem durante o combate." },
+{ nome:"URU", preco:2200, dano:"D4+D3", capacidade:"32/32", classe:"SMG", hab:"Uma vez por combate pode disparar rajada descontrolada com efeitos variados ao rolar 1d6." },
+{ nome:"MP40", preco:2800, dano:"D6", capacidade:"32/32", classe:"SMG", hab:"Ao entrar em combate rola 1d20 para intimidar, se falhar a arma trava." },
+{ nome:"MP5", preco:2400, dano:"D6+1", capacidade:"30/30", classe:"SMG", hab:"Se o alvo reconhecer a arma, sofre 1d4+1 a mais a cada tiro." },
+{ nome:"LC10", preco:2999, dano:"D4+D3", capacidade:"34/34", classe:"SMG", hab:"Reduz penalidade de recuo em rajadas nos primeiros 5 disparos." },
+{ nome:"PP-19 Bizon", preco:2580, dano:"D6", capacidade:"64/64", classe:"SMG", hab:"Após 4 disparos causa dano de fogo e após 6 também afeta o usuário." },
+{ nome:"LACHMANN SUB", preco:2790, dano:"D6+D4", capacidade:"30/30", classe:"SMG", hab:"Pode alternar entre modo preciso ou insano afetando recuo e alvos." },
+{ nome:"P90", preco:3800, dano:"D8", capacidade:"50/50", classe:"SMG", hab:"Todos disparos causam hemorragia e dano máximo causa hemorragia grave." },
 
-{ nome:"Sinalizador de mão", preco:40, dano:"-", capacidade:"-", hab:"Um sinalizador que, além de produzir uma fumaça avermelhada, produz uma luz vermelha muito forte." },
-{ nome:"Granada de fragmentação", preco:75, dano:"D12 / D6", capacidade:"-", hab:"Uma granada que quando explode causa um D12 de dano no centro da explosão e um D6 em todos ao redor por estilhaços." },
-{ nome:"Granada de Fumaça", preco:65, dano:"-", capacidade:"-", hab:"Uma granada que apenas faz uma grande cortina de fumaça que dificulta a visão e respiração." },
-{ nome:"Granada Incendiaria", preco:80, dano:"2D4", capacidade:"-", hab:"Uma granada raramente fabricada que espalha fogo onde cai em um raio de 2 a 3 metros que causa 2D4 por turno no alvo." },
-{ nome:"Granada de Luz", preco:60, dano:"-", capacidade:"-", hab:"Uma granada que libera uma luz muito forte com um atraso de 2 segundos cegando temporariamente quem não desviou ou cobriu os olhos." },
-{ nome:"Pistola Sinalizadora", preco:100, dano:"-", capacidade:"-", hab:"Uma pistola que atira um sinalizador parecido com o de mão, mas que é similar a uma bola de fogo." },
-{ nome:"Munição Pis. Sinalizadora", preco:15, dano:"-", capacidade:"12", hab:"Uma caixa que contem 12 munições." },
-{ nome:"Dinamite", preco:220, dano:"2D8", capacidade:"-", hab:"Uma banana de dinamite que causa 2D8 de dano ao explodir com um raio de 3 metros de explosão." },
-{ nome:"Lança-Chamas", preco:4950, dano:"-", capacidade:"1 combate", hab:"Uma arma capaz de disparar uma rajada de fogo continua, um lança-chamas dura um combate." },
-{ nome:"Cilindro de combustível", preco:75, dano:"-", capacidade:"-", hab:"Um cilindro cheio de líquido inflamável que vai no lança-chamas." },
-{ nome:"Lança Foguetes", preco:5500, dano:"2D20", capacidade:"1", hab:"Uma arma que dispara um foguete por vez que causa até 2D20." },
-{ nome:"Foguete", preco:500, dano:"-", capacidade:"1", hab:"Munição do Lança foguete." },
-{ nome:"C4", preco:2200, dano:"2D12", capacidade:"-", hab:"Uma carga explosiva dentro de um plástico com um dispositivo para detonação remota, a explosão tem 4 metros que causa 2D12 de dano." },
-{ nome:"Detonador", preco:40, dano:"-", capacidade:"-", hab:"Um dispositivo com um botão que detona a C4 para a qual ele foi programado, um detonador sem programar a C4 que ele deve explodir é inútil." },
+{ nome:"Caixa de munição 5.7x28mm", preco:60, dano:"-", capacidade:"25", classe:"Munição", hab:"Contém 25 munições. Tiro forte." },
 
-{ nome:"Faca de Arremesso", preco:120, dano:"D2", capacidade:"-", hab:"Pensa Rápido - Essa faca permite ser arremessada facilmente por ser feita de um material leve." },
-{ nome:"Faca de Combate", preco:180, dano:"D3", capacidade:"-", hab:"Hoje não - Permite sacrificar a faca para impedir um ataque inimigo, Mas somente uma faca pode ser usada para combate." },
-{ nome:"Facão", preco:380, dano:"D4", capacidade:"-", hab:"Mais um dia de trabalho - Essa arma permite limpar o terreno que possui muita vegetação, além de causar o dobro de dano contra plantas." },
-{ nome:"Machado", preco:520, dano:"D4+2", capacidade:"-", hab:"Tudo é arvore pra Mim - Essa arma permite 2 ataques no mesmo turno, essa habilidade só ativa contra inimigos resistentes." },
-{ nome:"Katana", preco:2000, dano:"D6", capacidade:"-", hab:"Reflexo Divino - Com essa arma na mão, uma vez por combate pode defletir um ataque sem rolar dado." }
+/* Fuzil */
+{ nome:"M4", preco:2400, dano:"D4+D3", capacidade:"30/30", classe:"Fuzil", hab:"I Can’t Stop - Pode se movimentar, e logo em seguida atira, porém somente 3 tiros." },
+{ nome:"Kalashinikov", preco:3650, dano:"D4+2", capacidade:"30/30", classe:"Fuzil", hab:"Aprovado pelo Putin - Essa arma é incapaz de sofrer penalidade de desastre de cair 1 no dado." },
+{ nome:"SKS", preco:2700, dano:"D8", capacidade:"10/10", classe:"Fuzil", hab:"Olha! Sem as Mãos! - Não perde precisão usando apenas uma das mãos." },
+{ nome:"Galil ACE", preco:2800, dano:"D6+1", capacidade:"30/30", classe:"Fuzil", hab:"Morde e Assopra - O primeiro tiro dela não causará dano mas deixará o alvo incapacitado por uma rodada." },
+{ nome:"Type 81", preco:1600, dano:"D4+1", capacidade:"30/30", classe:"Fuzil", hab:"Ditado Chines - Ao usar a arma somente quando necessário ela causará o dobro de dano (Necessário = risco de vida)." },
+{ nome:"Malyuk", preco:3200, dano:"D6", capacidade:"30/30", classe:"Fuzil", hab:"Exterminador do Futuro - Se essa arma for levada para uma missão de extermínio ela causa o dobro de dano." },
+{ nome:"Scar", preco:2800, dano:"D4 ou D6", capacidade:"30/30 ou 10/10", classe:"Fuzil", hab:"Troca Justa - Essa arma usa dois tipos de munição. A versão leve usa 5.56mm que cabe 30 no pente e causa um d4 de dano, a versão pesada usa 7.62mm e possui 10 de munição no pente causando D8 de dano." },
+{ nome:"Famas", preco:3400, dano:"D4", capacidade:"25/25", classe:"Fuzil", hab:"Menina Violenta - O primeiro tiro do combate atira 3 disparos de uma vez anulando recuo até o 5o disparo." },
+{ nome:"AN-94", preco:2094, dano:"D4+1", capacidade:"30/30", classe:"Fuzil", hab:"Mata Casal - O primeiro disparo atira 2 tiros de uma vez com 0 recuo, após o disparo o recuo volta ao normal." },
+{ nome:"Steyr AUG", preco:4000, dano:"D4+2", capacidade:"35/35", classe:"Fuzil", hab:"General Divino da Espada de Oito Cabos - Essa arma aceita qualquer tipo de munição, porém, quanto maior o calibre, maior o dano que será causado na própria arma. Ao colocar uma munição que não é a própria, o dano é reduzido em 1 dado." },
 
-];
+{ nome:"Caixa de munição 7.62mm", preco:100, dano:"-", capacidade:"40", classe:"Munição", hab:"contem 40 munições. tiro forte" },
+{ nome:"Caixa de munição 5,56mm", preco:55, dano:"-", capacidade:"35", classe:"Munição", hab:"contem 35 munições. tiro medio" },
+
+/* Escopeta */
+{ nome:"M1014", preco:2600, dano:"D12 (Perto) D6 (Médio)", capacidade:"6/6", classe:"Escopeta", hab:"Truque de Magica - Permite ser sacada das costas e atirar no mesmo turno e dar 1d4 de dano extra ao fazer essa ação." },
+{ nome:"Remington 870", preco:2800, dano:"D12+1 (perto) D6(Médio)", capacidade:"5/5", classe:"Escopeta", hab:"Se Ajoelhe Enquanto Fala Comigo - Se um tiro dessa arma acertar na perna e der ⅔ do dano máximo dela, o alvo se ajoelha e perde a próxima ação." },
+{ nome:"Winchester SXP", preco:3200, dano:"D12+D4 (perto) D8 (Médio)", capacidade:"6/6", classe:"Escopeta", hab:"Sai Porra! - Se um monstro estiver extremamente perto e um tiro a queima-roupa for possível, o jogador pode dar 1 tiro que gasta toda a munição, rodando o dano de todos os tiros em um único tiro e, de brinde, arremessando o alvo longe mas causa 100 de dano na durabilidade." },
+{ nome:"Mossberg 500", preco:3800, dano:"D12 (perto) D8 (Médio)", capacidade:"6/6", classe:"Escopeta", hab:"A verdadeira Força Vem de Proteger o que Você Ama - Se o jogador que possui essa arma estiver perto da morte, os outros jogadores poder a opção de dar suas ações a esse jogador, e ele pegará todas as ações doadas para si até o fim do combate." },
+{ nome:"Spas-12", preco:4000, dano:"D8 (perto) D4 (Médio)", capacidade:"9/9", classe:"Escopeta", hab:"Obrigado por Terem me Amado - Se a vida do jogador que porta essa arma chegar a zero, ele terá a oportunidade de se despedir e ter uma morte heroica descarregando suas armas no inimigo rodando um dado de acordo com a quantidade de tiros que pode dar." },
+
+{ nome:"Caixa de munição calibre 12", preco:30, dano:"-", capacidade:"8", classe:"Munição", hab:"contem 8 munições. tiro forte" },
+
+/* Sniper */
+{ nome:"AWP", preco:4600, dano:"D20", capacidade:"5/5", classe:"Sniper", hab:"Genial! - Se você tiver escondido e tirar acima de 18, o tiro acerta na cabeça." },
+{ nome:"Barrett", preco:5000, dano:"D20", capacidade:"5/5", classe:"Sniper", hab:"Papoco de 40TÃO - A cada abate o dano aumenta 1 D6 e se for na cabeça aumenta 1 D8." },
+
+/* Especiais */
+{ nome:"Granada de fragmentação", preco:75, dano:"D12 / D6", capacidade:"-", classe:"Especial", hab:"Uma granada que quando explode causa um D12 de dano no centro da explosão e um D6 em todos ao redor por estilhaços." },
+{ nome:"Granada de Fumaça", preco:65, dano:"-", capacidade:"-", classe:"Especial", hab:"Uma granada que apenas faz uma grande cortina de fumaça que dificulta a visão e respiração." },
+{ nome:"Granada Incendiaria", preco:80, dano:"2D4", capacidade:"-", classe:"Especial", hab:"Uma granada raramente fabricada que espalha fogo onde cai em um raio de 2 a 3 metros que causa 2D4 por turno no alvo." },
+{ nome:"Granada de Luz", preco:60, dano:"-", capacidade:"-", classe:"Especial", hab:"Uma granada que libera uma luz muito forte com um atraso de 2 segundos cegando temporariamente quem não desviou ou cobriu os olhos." },
+{ nome:"Dinamite", preco:220, dano:"2D8", capacidade:"-", classe:"Especial", hab:"Uma banana de dinamite que causa 2D8 de dano ao explodir com um raio de 3 metros de explosão." },
+{ nome:"Lança Foguetes", preco:5500, dano:"2D20", capacidade:"1", classe:"Especial", hab:"Uma arma que dispara um foguete por vez que causa até 2D20." },
+{ nome:"C4", preco:2200, dano:"2D12", capacidade:"-", classe:"Especial", hab:"Uma carga explosiva dentro de um plástico com um dispositivo para detonação remota, a explosão tem 4 metros que causa 2D12 de dano." },
+
+/* Corpo a Corpo */
+{ nome:"Faca de Arremesso", preco:120, dano:"D2", capacidade:"-", classe:"Corpo a Corpo", hab:"Pensa Rápido - Essa faca permite ser arremessada facilmente por ser feita de um material leve." },
+{ nome:"Faca de Combate", preco:180, dano:"D3", capacidade:"-", classe:"Corpo a Corpo", hab:"Hoje não - Permite sacrificar a faca para impedir um ataque inimigo, Mas somente uma faca pode ser usada para combate." },
+{ nome:"Facão", preco:380, dano:"D4", capacidade:"-", classe:"Corpo a Corpo", hab:"Mais um dia de trabalho - Essa arma permite limpar o terreno que possui muita vegetação, além de causar o dobro de dano contra plantas." },
+{ nome:"Machado", preco:520, dano:"D4+2", capacidade:"-", classe:"Corpo a Corpo", hab:"Tudo é arvore pra Mim - Essa arma permite 2 ataques no mesmo turno, essa habilidade só ativa contra inimigos resistentes." },
+{ nome:"Katana", preco:2000, dano:"D6", capacidade:"-", classe:"Corpo a Corpo", hab:"Reflexo Divino - Com essa arma na mão, uma vez por combate pode defletir um ataque sem rolar dado." }
         // CORREÇÃO: Recuperação segura que nunca assume que todos os objetos aninhados existem
         let dadosCarregados = JSON.parse(localStorage.getItem(usuarioLogado));
         
@@ -306,25 +310,43 @@
             renderizarInventario();
         }
 
-        function renderizarLoja(filtro = "") {
-            const container = document.getElementById('lista-loja');
-            container.innerHTML = "";
-            DB_ARMAS.filter(a => a.nome.toLowerCase().includes(filtro.toLowerCase())).forEach(arma => {
-                const div = document.createElement('div');
-                div.className = "item-loja-v";
-                div.innerHTML = `
-                    <div class="loja-info">
-                        <div class="tooltip"><strong>${arma.nome}</strong>
-                            <span class="tooltiptext">Dano: ${arma.dano}<br>${arma.hab}</span>
-                        </div>
-                        <span class="preco-tag">$${arma.preco}</span>
-                    </div>
-                    <button onclick="comprarItem('${arma.nome}')">Comprar</button>
-                `;
-                container.appendChild(div);
-            });
-        }
+        let classeAtual = "";
 
+function renderizarLoja(filtro = "") {
+    const container = document.getElementById('lista-loja');
+    container.innerHTML = "";
+
+    DB_ARMAS
+    .filter(a => a.nome.toLowerCase().includes(filtro.toLowerCase()))
+    .filter(a => classeAtual === "" || a.classe === classeAtual)
+    .forEach(arma => {
+
+        const div = document.createElement('div');
+        div.className = "item-loja-v";
+
+        div.innerHTML = `
+            <div class="loja-info">
+                <div class="tooltip"><strong>${arma.nome}</strong>
+                    <span class="tooltiptext">
+                        Classe: ${arma.classe}<br>
+                        Dano: ${arma.dano}<br>
+                        ${arma.hab}
+                    </span>
+                </div>
+                <span class="preco-tag">$${arma.preco}</span>
+            </div>
+            <button onclick="comprarItem('${arma.nome}')">Comprar</button>
+        `;
+
+        container.appendChild(div);
+    });
+}
+
+        function filtrarClasse(classe) {
+    classeAtual = classe;
+    renderizarLoja(document.getElementById('busca-loja').value);
+}
+        
         function comprarItem(nomeArma) {
             const arma = DB_ARMAS.find(a => a.nome === nomeArma);
             if (dados.dinheiro >= arma.preco) {
